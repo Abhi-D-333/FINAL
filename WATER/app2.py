@@ -61,3 +61,7 @@ if test_file:
         st.pyplot(fig)
     else:
         st.error(f"CSV must contain these columns: {required_test_cols}")
+import os
+for file in ["final_segment_model.pkl", "final_tfidf_vectorizer.pkl", "final_pca_projection.pkl"]:
+    if not os.path.exists(file):
+        st.error(f"❌ Missing required file: {file}")
