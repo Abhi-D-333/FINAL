@@ -12,18 +12,18 @@ st.title("🎯 Supervised Customer Segmentation Dashboard")
 @st.cache_resource
 def load_assets():
     required_files = [
-        "final_segment_model.pkl",
-        "final_tfidf_vectorizer.pkl",
-        "final_pca_projection.pkl"
+        "WATER/final_segment_model.pkl",
+        "WATER/final_tfidf_vectorizer.pkl",
+        "WATER/final_pca_projection.pkl"
     ]
     missing = [f for f in required_files if not os.path.exists(f)]
     if missing:
         st.error(f"❌ The following file(s) are missing: {', '.join(missing)}")
         st.stop()
 
-    model = joblib.load("final_segment_model.pkl")
-    tfidf = joblib.load("final_tfidf_vectorizer.pkl")
-    pca = joblib.load("final_pca_projection.pkl")
+    model = joblib.load("WATER/final_segment_model.pkl")
+    tfidf = joblib.load("WATER/final_tfidf_vectorizer.pkl")
+    pca = joblib.load("WATER/final_pca_projection.pkl")
     return model, tfidf, pca
 
 model, tfidf, pca = load_assets()
