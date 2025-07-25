@@ -3,3 +3,4 @@ scikit-learn
 pandas
 matplotlib
 joblib
+scikit-learn==<1.7.1>
