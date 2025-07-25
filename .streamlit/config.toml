@@ -4,4 +4,4 @@ port = 8501
 enableCORS = false
 
 [general]
-mainPage = "app2.py"
+mainPage = "WATER/app2.py"
